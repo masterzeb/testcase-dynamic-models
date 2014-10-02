@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>SMYT test case</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta http-equiv="Content-Type" content="UTF-8" />
+                
+        <script src="/static/js/jquery-1.9.0.min.js"></script>
+        <script src="/static/js/jquery-ui-1.10.2.min.js"></script>
+        <script src="/static/js/jquery-ui.datepicker-ru.js"></script>
+        <script src="/static/js/jquery.dateentry.min.js"></script>
+        <script src="/static/js/jquery.validate.min.js"></script>
+        <script src="/static/js/jquery.cookie.js"></script>
+        <script src="/static/js/jquery.form.js"></script>
+        <script src="/static/js/django.validation.js"></script>
+        <script src="/static/js/string.js"></script>
+        <script src="/static/js/actions.js"></script>
+        <script src="/static/js/grid.js"></script>
+        <script src="/static/js/form.js"></script>
+        <script src="/static/js/core.js"></script>
+    
+        <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/static/css/jquery-ui-1.10.2.css">
+        <link rel="stylesheet" href="/static/css/styles.css">
+    </head>
+    
+    <body>
+        <div id="models-list">
+            <h2><a href="/struct" target="_blank">Таблицы</a></h2>
+            <ul>
+                {% for model in models %}
+                    <li data-model-name="{{ model.0 }}">{{ model.1.verbose_name_plural }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div id="models-data" align="center">
+            <h2><span>Данные</span></h2>
+            <div id="content">
+                <h5 class="hint">
+                    Подсказка: при редактировании используйте Tab для перехода к следующему полу, Ctrl+Z для отмены редактирования и Ctrl+R для очистки поля
+                </h5>
+                <div id="data"></div>
+                <div class="actions" style="display: none;">
+                    <button id="del-button" class="ui-state-default">
+                        <span class="ui-icon ui-icon-closethick"></span>Удалить
+                    </button>
+                    <button id="add-button" class="ui-state-default">
+                        <span class="ui-icon ui-icon-plusthick"></span>Добавить
+                    </button>
+                    <button id="cancel-button" class="ui-state-default" style="display: none;">
+                        <span class="ui-icon ui-icon-arrowreturnthick-1-w"></span>Отменить
+                    </button>
+                    <button id="confirm-button" class="ui-state-default" style="display: none;">
+                        <span class="ui-icon ui-icon-check"></span>Подтвердить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

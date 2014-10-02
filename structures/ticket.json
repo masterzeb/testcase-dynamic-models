@@ -1,0 +1,43 @@
+{
+    "ticket": {
+        "meta": {
+            "verbose_name": "Заявка",
+            "verbose_name_plural": "Заявки",
+            "ordering": ["-rating"]
+        },
+        "unicode": {
+            "pattern": "Заявка №{0}",
+            "format": ["id"]
+        },
+        "fields": [{
+            "type": "char",
+            "id": "title",
+            "opts": {
+                "max_length": 100,
+                "verbose_name": "Название"
+            }
+        }, {
+            "type": "date",
+            "id": "created",
+            "opts": {
+                "verbose_name": "Дата назначения"
+            }
+        }, {
+            "type": "date",
+            "id": "deadline",
+            "opts": {
+                "verbose_name": "Последний срок исполнения"
+            }
+        },{
+            "type": "int",
+            "id": "rating",
+            "opts": {
+                "default": 0,
+                "verbose_name": "Рейтинг"
+            },
+            "validators": {
+                "self": {"core.validators.RangeValidator": [0, 100]}
+            }
+        }]
+    }
+}

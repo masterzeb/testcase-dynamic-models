@@ -1,0 +1,30 @@
+{   
+    "client": {
+        "meta": {
+            "verbose_name": "Клиент",
+            "verbose_name_plural": "Клиенты"
+        },
+        "fields": [{
+            "type": "char",
+            "id": "name",
+            "opts": {
+                "max_length": 15,
+                "verbose_name": "Имя"
+            }
+        }, {
+            "type": "char",
+            "id": "surname",
+            "opts": {
+                "max_length": 20,
+                "verbose_name": "Фамилия"
+            }            
+        }, {
+            "type": "date",
+            "id": "birthdate",
+            "opts": {
+                "max_length": 50,
+                "verbose_name": "Дата рождения"
+            }
+        }]
+    }
+}

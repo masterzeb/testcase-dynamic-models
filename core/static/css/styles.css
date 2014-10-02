@@ -1,0 +1,34 @@
+html, body, #mainContainer {height: 100%;}
+body {margin: 0; padding: 0; text-align: center;}
+* {outline: none;}
+
+h2 {color: #4297d7; margin: 0px; padding: 15px 0px; border-bottom: 1px solid #a6c9e2;}
+h2 a {color: #4297d7; text-decoration: none;}
+h2 span {cursor: pointer;}
+
+h5.hint {color: #666; font-size: 12px; display: none; margin: 5px 0px;}
+ul {text-align: left;}
+ul li {font-size: 18px; color: #4297d7; cursor: pointer;} 
+ul li.active {font-weight: bold; color: #acdd4a; cursor: default;}
+
+table, div.actions {width: 90%;}
+table, td, th {border: 1px solid #4297d7;}
+table {margin-top: 15px;}
+td, th {text-align: center;}
+th {color: #4297d7;}
+td div {height: 100%; width: 100%; padding: 10px 0px;}
+td div.error {color: #F00;}
+td ul {margin: 0px; padding: 0px; display: inline-block;}
+td ul li {padding: 3px; margin: 0px 2px; display: inline-block;}
+
+input {height: 22px; border: 1px solid #4297d7; margin: 5px 10px;}
+input[disabled] {background-color: #FFF; color: #000;}
+
+button {padding: 0px 12px 4px; cursor: pointer; color: #FFF;}
+button:focus::-moz-focus-inner {border: none;}
+button span {display: inline-block !important; position: relative; top: 4px; left: -4px;}
+
+div.actions {margin-top: 10px; text-align: right;}
+label.error {font-size: 10px; color: #F00; margin-top: 5px;}
+#models-list {float: left; width: 200px; border-right: 1px solid #a6c9e2; height: 100%;}
+#models-data {margin-left: 200px;}

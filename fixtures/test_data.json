@@ -1,0 +1,31 @@
+[
+    {
+        "pk": 1,
+        "model": "core.ticket",
+        "fields": {
+            "title": "Установка ПО",
+            "created": "2013-04-05",
+            "deadline": "2013-04-07",
+            "rating": 75
+        }
+    },
+    {
+        "pk": 2,
+        "model": "core.ticket",
+        "fields": {
+            "title": "Устранение неполадок",
+            "created": "2013-04-03",
+            "deadline": "2013-04-03",
+            "rating": 80
+        }        
+    },
+    {
+        "pk": 1,
+        "model": "core.client",
+        "fields": {
+            "name": "Утюгов",
+            "surname": "Василий",
+            "birthdate": "1970-01-16"
+        }        
+    }
+]
